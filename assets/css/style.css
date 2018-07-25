@@ -2,6 +2,7 @@ body {
   font-family: 'PT Sans', sans-serif;
 }
 
+/* Pantalla de inicio */
 .welcome-screen {
   background-color: orange;
   height: 100vh;
@@ -19,9 +20,77 @@ body {
   margin: 2rem 0;
 }
 
+.loader-container {
+  width: 70px;
+  height: 70px;
+  margin: auto;
+  position: relative;
+}
 
+.loader1, .loader2 {
+  position: absolute;
+  border: 5px solid transparent;
+  border-radius: 50%;
+}
+
+.loader1 {
+  width: 70px;
+  height: 70px;
+  border-top: 5px solid azure;
+  border-bottom: 5px solid azure;
+  animation: clockwisespin 2s linear 3;
+}
+
+.loader2 {
+  width: 60px;
+  height: 60px;
+  border-top: 5px solid darkturquoise;
+  border-bottom: 5px solid darkturquoise;
+  top: 5px;
+  left: 5px;
+  animation: anticlockwisespin 2s linear 3;
+}
+
+@keyframes clockwisespin {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+
+@keyframes anticlockwisespin {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(-360deg);}
+}
+
+@keyframes fadeout {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}
+
+/* Sección Principal */
 .main-page {
   height: 100vh;
   width: 100vw;
   text-align: center;
+}
+
+.top {
+  height: 7vh; 
+  background-color: orange; 
+}
+
+.top h3 {
+  color: white;
+  margin: auto;
+}
+
+.top img {
+  height: 7vh;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+#map {
+  width: 100vw; 
+  height: 35vh;
 }

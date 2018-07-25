@@ -16,17 +16,25 @@
 </head>
 
 <body>
-
-<!-- 
+  <!-- Pantalla de bienvenida -->
   <div id="first" class="welcome-screen">
     <img id="logo-white" src="assets/img/foodmap-white.png" alt="Logo FoodMap">
     <p>Encuentra locales de comida cerca de ti.</p>
-    <button id="enter" type="button" class="btn btn-outline-light">COMENZAR</button>
+    <div class="loader-container">
+      <div id="loaderOne" class="loader1"></div>
+      <div id="loaderTwo" class="loader2"></div>
+    </div>
   </div>
-   -->
-   <button onclick="findMe()">localizame</button>
+
   <div id="main" class="main-page">
+    <header class="top">
+      <h3>FOODMAP</h3>
+      <img src="assets/img/foodmap.png" alt="mini logo">
+    </header>
     <div id="map">
+    </div>
+    <div class="searchBox">
+      <input type="text" placeholder="Buscar local" onkeydown="search()">
     </div>
     <div class="info-restaurantes">
 
@@ -42,6 +50,7 @@
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
     crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAs4-cqA7I18WgCdr_TF0IAyBu_GtPl3ys&libraries=places"></script>
   <script src="assets/js/app.js"></script>
   <script src="assets/js/maps.js"></script>
 </body>
