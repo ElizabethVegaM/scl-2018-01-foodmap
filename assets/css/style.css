@@ -1,14 +1,17 @@
 body {
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'Muli', sans-serif;
+  background-color: #3D3A37;
+  color: #fafafa;
 }
 
 /* Pantalla de inicio */
 .welcome-screen {
-  background-color: orange;
+  background-color: #9DD695;
   height: 100vh;
   width: 100vw;
   text-align: center;
-  color: #fafafa;
+  position: absolute;
+  z-index: 2;
 }
 
 #logo-white {
@@ -44,8 +47,8 @@ body {
 .loader2 {
   width: 60px;
   height: 60px;
-  border-top: 5px solid darkturquoise;
-  border-bottom: 5px solid darkturquoise;
+  border-top: 5px solid #EDE580;
+  border-bottom: 5px solid #EDE580;
   top: 5px;
   left: 5px;
   animation: anticlockwisespin 2s linear 3;
@@ -66,6 +69,11 @@ body {
   to {opacity: 0;}
 }
 
+@keyframes fadein {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
 /* Sección Principal */
 .main-page {
   height: 100vh;
@@ -74,23 +82,34 @@ body {
 }
 
 .top {
-  height: 7vh; 
-  background-color: orange; 
+  height: 8vh; 
+  background-color: #9DD695; 
 }
 
 .top h3 {
-  color: white;
   margin: auto;
+  padding-top: 3px;
+  font-family: 'Merienda', cursive;
 }
 
 .top img {
   height: 7vh;
   position: absolute;
-  top: 5px;
+  top: 3px;
   right: 5px;
 }
 
 #map {
   width: 100vw; 
   height: 35vh;
+  margin-top: 10px;
+  color: black;
+}
+
+.searchBox {
+  padding: 10px;
+}
+
+.searchBox h5 {
+  color: #EDE580;
 }

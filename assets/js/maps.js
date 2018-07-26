@@ -7,7 +7,7 @@ let infowindow;
 
 // Iniciar el mapa con la localización del dispositivo
 function initMap() {
-  navigator.geolocation.getCurrentPosition(function(position) {
+  navigator.geolocation.getCurrentPosition(function (position) {
     latitude = position.coords.latitude;
     longitude = position.coords.longitude;
 
@@ -15,7 +15,7 @@ function initMap() {
 
     const mapOptions = {
       center: myLatlng,
-      zoom: 14,
+      zoom: 13,
       mapTypeId: google.maps.MapTypeId.MAP
     };
 
@@ -27,12 +27,12 @@ function initMap() {
     const request = {
       location: myLatlng,
       radius: 5000,
-      type: ['restaurant']
+      types: ['restaurant', 'cafe', 'bar']
     };
 
     // Petición de búsqueda de los lugares con los parámetros ya indicados
     const service = new google.maps.places.PlacesService(map);
-    service.nearbySearch(request, function(results, status) {
+    service.nearbySearch(request, function (results, status) {
       if (status === google.maps.places.PlacesServiceStatus.OK) {
         for (var i = 0; i < results.length; i++) {
           createMarker(results[i]);
@@ -48,10 +48,22 @@ function createMarker(place) {
     map: map,
     position: place.geometry.location
   });
-  google.maps.event.addListener(marker, 'click', function() {
+  google.maps.event.addListener(marker, 'click', function () {
     // Para mostrar nombre y dirección de los lugares
-    infowindow.setContent('<div><strong>' + place.name + '</strong><br>' +
-      '<br>' + place.vicinity + '</div>');
+    infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + place.vicinity + '</div>');
     infowindow.open(map, this);
   });
+}
+
+let searchInput = document.getElementById('searchInput');
+
+new google.maps.places.Autocomplete(searchInput);
+
+// Búsqueda de locales
+function search() {
+
+}
+
+function createModal() {
+
 }
