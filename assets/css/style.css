@@ -5,6 +5,7 @@ body {
 }
 
 /* Pantalla de inicio */
+
 .welcome-screen {
   background-color: #9DD695;
   height: 100vh;
@@ -30,7 +31,8 @@ body {
   position: relative;
 }
 
-.loader1, .loader2 {
+.loader1,
+.loader2 {
   position: absolute;
   border: 5px solid transparent;
   border-radius: 50%;
@@ -55,26 +57,43 @@ body {
 }
 
 @keyframes clockwisespin {
-  from {transform: rotate(0deg);}
-  to {transform: rotate(360deg);}
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes anticlockwisespin {
-  from {transform: rotate(0deg);}
-  to {transform: rotate(-360deg);}
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
 }
 
 @keyframes fadeout {
-  from {opacity: 1;}
-  to {opacity: 0;}
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 @keyframes fadein {
-  from {opacity: 0;}
-  to {opacity: 1;}
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* Sección Principal */
+
 .main-page {
   height: 100vh;
   width: 100vw;
@@ -82,8 +101,8 @@ body {
 }
 
 .top {
-  height: 8vh; 
-  background-color: #9DD695; 
+  height: 8vh;
+  background-color: #9DD695;
 }
 
 .top h3 {
@@ -100,7 +119,7 @@ body {
 }
 
 #map {
-  width: 100vw; 
+  width: 100vw;
   height: 35vh;
   margin-top: 10px;
   color: black;
@@ -112,4 +131,18 @@ body {
 
 .searchBox h5 {
   color: #EDE580;
+}
+
+.restaurantContainer h6 {
+  display: inline;
+}
+
+.restaurantContainer button {
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
+.modal {
+  color: black;
 }

@@ -43,6 +43,7 @@ function initMap() {
   });
 }
 
+infoContainer = document.getElementById('results');
 // Búsqueda de locales
 function search() {
   navigator.geolocation.getCurrentPosition(function(position) {
@@ -65,9 +66,11 @@ function search() {
     query: input
   }, function(results, status) {
     if (status === google.maps.places.PlacesServiceStatus.OK) {
+      infoContainer.innerHTML = '';
       for (var i = 0; i < results.length; i++) {
         createModal(results[i]);
       }
+      input = '';
     }
   });
 };
@@ -96,7 +99,10 @@ function createModal(place) {
     infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + place.formatted_address + '</div>');
     infowindow.open(map, this);
   });
-
-  infoContainer = document.getElementById('results');
-  infoContainer.innerHTML += '<div class="restaurantContainer"><h6><strong>' + place.name + '</strong></h6><p>' + place.formatted_address + '</p><p>' + place.photos['0'].html_attributions['0'] + '</p><p>' + place.rating + '</div>';
+  infoContainer.innerHTML += '<div class="restaurantContainer"><h6>' + place.name + '</h6><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#a' + place.id + '"><i class="fas fa-utensils"></i></button><div id="a' + place.id + '" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">    <div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="exampleModalLongTitle">'+ place.name +'</h5><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body"><p>' + place.formatted_address + '</p><p>' + place.photos['0'].html_attributions['0'] + '</p><p>Rating: ' + place.rating + '</p></div></div></div></div></div>';
 }
+
+
+/*
+'<div class="restaurantContainer"><h6><strong>' + place.name + '</strong></h6><button type="button" class="btn btn-primary" data-toggle="modal" data-target=".' + place.name + '"><i class="fas fa-utensils"></i></button><div class="modal fade bd-example-modal-sm ' + place.name + '" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true"><div class="modal-dialog modal-sm"><div class="modal-content"><p>' + place.formatted_address + '</p><p>' + place.photos['0'].html_attributions['0'] + '</p><p>Rating: ' + place.rating + '</p></div></div></div>'
+ */
