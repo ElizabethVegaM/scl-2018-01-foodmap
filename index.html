@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>FOODMAP</title>
   <!-- Tipografías -->
-  <link href="https://fonts.googleapis.com/css?family=Merienda|Muli" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Muli" rel="stylesheet">
   <!-- Íconos -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
     crossorigin="anonymous">
@@ -39,7 +39,7 @@
     <div class="searchBox">
       <h5>Comida cerca de ti</h5>
       <input id="searchInput" class="controls" type="text" placeholder="Buscar local">
-      <button onclick="search()">Buscar</button>
+      <button id="searchBtn" type="button" class="btn btn-light" onclick="search()" onkeydown="verify()"><i class="fas fa-search"></i></button>
     </div>
     <div id="results" class="info-restaurantes">
     </div>

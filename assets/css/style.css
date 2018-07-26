@@ -7,7 +7,10 @@ body {
 /* Pantalla de inicio */
 
 .welcome-screen {
-  background-color: #9DD695;
+  background-image: url(../img/appetizer-dark-delicious-326279.jpg);
+  background-color: #3D3A37;
+  background-position-x: right;
+  background-size: cover;
   height: 100vh;
   width: 100vw;
   text-align: center;
@@ -16,7 +19,7 @@ body {
 }
 
 #logo-white {
-  margin-top: 15vh;
+  margin-top: 25vh;
   width: 70vw;
 }
 
@@ -96,19 +99,21 @@ body {
 
 .main-page {
   height: 100vh;
-  width: 100vw;
+  min-width: 100vw;
   text-align: center;
+  background-image: url(../img/background-board-brown-326311.jpg);
+  background-size: cover;
 }
 
 .top {
   height: 8vh;
-  background-color: #9DD695;
+  background-color: #eb5e30;
 }
 
 .top h3 {
   margin: auto;
-  padding-top: 3px;
-  font-family: 'Merienda', cursive;
+  padding-top: 6px;
+  font-family: 'Abril Fatface', cursive;
 }
 
 .top img {
@@ -133,6 +138,12 @@ body {
   color: #EDE580;
 }
 
+
+.searchBox button {
+  padding: 3px 6px;
+  border-radius: 50%;
+}
+
 .restaurantContainer h6 {
   display: inline;
 }
@@ -145,4 +156,27 @@ body {
 
 .modal {
   color: black;
+}
+
+.fa-star {
+  color: #FDE74C;
+}
+
+@media (min-width: 768px) {
+  #map {
+    width: 50vw;
+    height: 80vh;
+    margin: 30px 10px;
+    float: right;
+  }
+  .searchBox {
+    margin-top: 10px;
+  }
+  #logo-white {
+  margin-top: 25vh;
+  width: 30vw;
+  }
+  #results {
+  width: 50vw;
+  }
 }
