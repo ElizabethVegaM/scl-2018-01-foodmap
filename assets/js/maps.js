@@ -67,7 +67,7 @@ function search() {
   }, function(results, status) {
     if (status === google.maps.places.PlacesServiceStatus.OK) {
       infoContainer.innerHTML = '';
-      for (var i = 0; i <= 12; i++) {
+      for (var i = 0; i <= results.length; i++) {
         createModal(results[i]);
       }
       input = '';
@@ -83,7 +83,7 @@ function createMarker(place) {
   });
   google.maps.event.addListener(marker, 'click', function() {
     // Para mostrar nombre y dirección de los lugares
-    infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + place.vicinity + '</div>');
+    infowindow.setContent('<div><strong>' + place.name + '</strong></div>');
     infowindow.open(map, this);
   });
 }

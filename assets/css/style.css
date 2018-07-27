@@ -98,8 +98,8 @@ body {
 /* Sección Principal */
 
 .main-page {
-  height: 100vh;
-  min-width: 100vw;
+  min-height: 100vh;
+  width: 100vw;
   text-align: center;
   background-image: url(../img/background-board-brown-326311.jpg);
   background-size: cover;
