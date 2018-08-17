@@ -1,10 +1,10 @@
 // Fadeout de la página principal
 const preload = document.getElementById('first');
 setTimeout(() => {
-  preload.style.animation = 'fadeout 1s ease';
+  preload.style.animation = 'fadeout 2s ease';
   preload.style.display = 'none';
-  main.style.animation = 'fadein 1s ease';
-}, 3000);
+  main.style.animation = 'fadein 2s ease';
+}, 4000);
 
 // Manejo del botón del input de búsqueda
 let inputTxt = document.getElementById('searchInput');

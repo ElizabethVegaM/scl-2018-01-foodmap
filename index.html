@@ -16,12 +16,13 @@
     crossorigin="anonymous">
   <!-- Estilos -->
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="preload" href="assets/img/appetizer-dark-delicious-326279.jpg" as="image">
 </head>
 
 <body>
   <!-- Pantalla de bienvenida -->
   <div id="first" class="welcome-screen">
-    <img id="logo-white" src=""assets/img/foodmap-small.png" alt="Logo FoodMap">
+    <img id="logoSmall" src="assets/img/foodmap-small.png" alt="">
     <p>Encuentra locales de comida cerca de ti.</p>
     <div class="loader-container">
       <div id="loaderOne" class="loader1"></div>
@@ -33,14 +34,14 @@
     <header class="top">
       <img src="assets/img/foodmap-long.png" alt="mini logo">
     </header>
-    <div id="map">
-    </div>
     <div class="searchBox">
       <h5>Comida cerca de ti</h5>
       <input id="searchInput" class="controls" type="text" placeholder="Buscar local">
       <button id="searchBtn" type="button" class="btn btn-light" onclick="search()" onkeydown="verify()"><i class="fas fa-search"></i></button>
     </div>
     <div id="results" class="info-restaurantes">
+    </div>
+    <div id="map">
     </div>
   </div>
 
@@ -52,6 +53,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQIMdscfKgjmPHR8zadMec-1RHUSPa0-M&libraries=places"></script>
+
   <script src="assets/js/view.js"></script>
   <script src="assets/js/controller.js"></script>
   <script src="assets/js/model.js"></script>
