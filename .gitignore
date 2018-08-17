@@ -1,0 +1,6 @@
+.Ds_Store
+*.swp
+.nyc_output/
+node_modules/
+/sendgrid.env 
+

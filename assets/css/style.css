@@ -1,5 +1,5 @@
 body {
-  font-family: 'Muli', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   background-color: #3D3A37;
   color: #fafafa;
 }
@@ -52,8 +52,8 @@ body {
 .loader2 {
   width: 60px;
   height: 60px;
-  border-top: 5px solid #EDE580;
-  border-bottom: 5px solid #EDE580;
+  border-top: 5px solid #ffbd4a;
+  border-bottom: 5px solid #ffbd4a;
   top: 5px;
   left: 5px;
   animation: anticlockwisespin 2s linear 3;
@@ -99,35 +99,30 @@ body {
 
 .main-page {
   min-height: 100vh;
-  width: 100vw;
   text-align: center;
-  background-image: url(../img/background-board-brown-326311.jpg);
-  background-size: cover;
 }
 
 .top {
-  height: 8vh;
-  background-color: #eb5e30;
+  height: 10vh;
+  background-color: #000000;
 }
 
 .top h3 {
   margin: auto;
   padding-top: 6px;
-  font-family: 'Abril Fatface', cursive;
 }
 
 .top img {
-  height: 7vh;
-  position: absolute;
-  top: 3px;
-  right: 5px;
+  height: 10vh;
 }
 
 #map {
-  width: 100vw;
+  width: 95vw;
   height: 35vh;
+  margin: auto;
   margin-top: 10px;
   color: black;
+  border: 8px solid #333;
 }
 
 .searchBox {
@@ -135,23 +130,30 @@ body {
 }
 
 .searchBox h5 {
-  color: #EDE580;
+  color: #ffbd4a;
 }
-
 
 .searchBox button {
   padding: 3px 6px;
   border-radius: 50%;
 }
 
-.restaurantContainer h6 {
-  display: inline;
+.searchBox button:hover {
+  background-color: #ffbd4a;
 }
 
-.restaurantContainer button {
+.restaurant-btn {
   background: none;
   border: none;
-  box-shadow: none;
+  color: #fafafa;
+}
+
+.restaurant-btn:hover {
+  color: #ffbd4a;
+}
+
+.restaurantContainer i {
+  margin-right: 10px;
 }
 
 .modal {

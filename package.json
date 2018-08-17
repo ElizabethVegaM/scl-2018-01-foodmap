@@ -1,0 +1,19 @@
+{
+  "name": "scl-2018-01-foodmap",
+  "version": "1.0.0",
+  "description": "Foodmap challenge reload",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ElizabethVegaM/scl-2018-01-foodmap.git"
+  },
+  "author": "Elizabeth",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ElizabethVegaM/scl-2018-01-foodmap/issues"
+  },
+  "homepage": "https://github.com/ElizabethVegaM/scl-2018-01-foodmap#readme"
+}
